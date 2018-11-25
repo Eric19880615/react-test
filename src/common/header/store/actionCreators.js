@@ -10,9 +10,23 @@ export const searchBlur = () => ({
   type: constants.SEARCH_BLUR
 });
 
+export const mouseEnter = () => ({
+  type: constants.MOUSE_ENTER
+});
+
+export const mouseLeave = () => ({
+  type: constants.MOUSE_LEAVE
+});
+
+export const changePage = (page) => ({
+  type: constants.CHANGE_PAGE,
+  page
+});
+
 const changeHot = (data) => ({
   type: constants.SEARCH_HOT,
-  data: fromJS(data)
+  data: fromJS(data),
+  totalPage: Math.ceil(data.length / 10)
 });
 
 //搜索框聚焦请求热门数据
