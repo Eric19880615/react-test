@@ -9,7 +9,7 @@ import {
 } from './style';
 import {actionCreators} from './store';
 
-//无状态组件
+
 class Header extends Component {
   render() {
     const {focused, handleInputFocus, handleInputBlur, list} = this.props;
@@ -61,7 +61,6 @@ class Header extends Component {
     const pageList = [];
     if (newList.length) {
       for (let i = (page - 1) * 10; i < page * 10; i++) {
-        console.log(newList[i]);
         pageList.push(
           <SearchInfoItem key={newList[i]}>{newList[i]}</SearchInfoItem>
         )
@@ -123,6 +122,7 @@ const mapDispatchToProps = (dispatch) => {
       dispatch(actionCreators.mouseLeave());
     },
     handleChangePage(page, totalPage, spin) {
+      //icon旋转动画
       let originAngle = spin.style.transform.replace(/[^0-9]/ig, '');
       if (originAngle) {
         originAngle = parseInt(originAngle, 10);
