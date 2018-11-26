@@ -26,6 +26,11 @@ export const fetchHomeData = () => {
   }
 };
 
+export const toggleTopShow = (show) => ({
+  type: constants.TOGGLE_SCROLL_SHOW,
+  show
+});
+
 //点击加载更多
 export const getMoreList = (page) => {
   return (dispatch) => {

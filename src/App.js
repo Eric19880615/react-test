@@ -16,9 +16,9 @@ class App extends Component {
         <GlobalIcon/>
         <Provider store={store}>
           <Fragment>
-            <Header/>
             <BrowserRouter>
               <Fragment>
+                <Header/>
                 <Route path='/' exact component={Home}/>
                 <Route path='/detail' exact component={Detail}/>
               </Fragment>
