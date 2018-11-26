@@ -1,0 +1,102 @@
+{
+  "success": true,
+  "data": {
+    "topicList": [
+      {
+        "id": 1,
+        "title": "社会热点",
+        "imageUrl": "//upload.jianshu.io/collections/images/261938/man-hands-reading-boy-large.jpg?imageMogr2/auto-orient/strip|imageView2/1/w/64/h/64"
+      },
+      {
+        "id": 2,
+        "title": "手手绘",
+        "imageUrl": "//upload.jianshu.io/collections/images/21/20120316041115481.jpg?imageMogr2/auto-orient/strip|imageView2/1/w/64/h/64"
+      }
+    ],
+    "articleList": [
+      {
+        "id": 1,
+        "title": "胡歌12年后首谈车祸",
+        "desc": "文/麦大人 01 胡歌又刷屏了。 近日他上了《朗读者》，而这一期的主题是“生命”，他用磁性的嗓音，朗读了一段《哈姆雷特》中的经典独白，相当震撼：...",
+        "imageUrl": "//upload-images.jianshu.io/upload_images/2259045-2986b9be86b01f63?imageMogr2/auto-orient/strip|imageView2/1/w/300/h/240"
+      },
+      {
+        "id": 2,
+        "title": "胡歌12年后首谈车祸：既然活下来了，就不能白白活着",
+        "desc": "文/麦大人 01 胡歌又刷屏了。 近日他上了《朗读者》，而这一期的主题是“生命”，他用磁性的嗓音，朗读了一段《哈姆雷特》中的经典独白，相当震撼：...",
+        "imageUrl": "//upload-images.jianshu.io/upload_images/2259045-2986b9be86b01f63?imageMogr2/auto-orient/strip|imageView2/1/w/300/h/240"
+      },
+      {
+        "id": 3,
+        "title": "胡歌12年后首谈车祸：既然活下来了，就不能白白活着",
+        "desc": "文/麦大人 01 胡歌又刷屏了。 近日他上了《朗读者》，而这一期的主题是“生命”，他用磁性的嗓音，朗读了一段《哈姆雷特》中的经典独白，相当震撼：...",
+        "imageUrl": "//upload-images.jianshu.io/upload_images/2259045-2986b9be86b01f63?imageMogr2/auto-orient/strip|imageView2/1/w/300/h/240"
+      },
+      {
+        "id": 4,
+        "title": "胡歌12年后首谈车祸：既然活下来了，就不能白白活着",
+        "desc": "文/麦大人 01 胡歌又刷屏了。 近日他上了《朗读者》，而这一期的主题是“生命”，他用磁性的嗓音，朗读了一段《哈姆雷特》中的经典独白，相当震撼：...",
+        "imageUrl": "//upload-images.jianshu.io/upload_images/2259045-2986b9be86b01f63?imageMogr2/auto-orient/strip|imageView2/1/w/300/h/240"
+      }
+    ],
+    "recommendList": [
+      {
+        "id": 1,
+        "imageUrl": "http://cdn2.jianshu.io/assets/web/banner-s-3-7123fd94750759acf7eca05b871e9d17.png"
+      },
+      {
+        "id": 2,
+        "imageUrl": "http://cdn2.jianshu.io/assets/web/banner-s-4-b70da70d679593510ac93a172dfbaeaa.png"
+      },
+      {
+        "id": 3,
+        "imageUrl": "http://cdn2.jianshu.io/assets/web/banner-s-7-1a0222c91694a1f38e610be4bf9669be.png"
+      },
+      {
+        "id": 4,
+        "imageUrl": "http://cdn2.jianshu.io/assets/web/banner-s-5-4ba25cf5041931a0ed2062828b4064cb.png"
+      },
+      {
+        "id": 5,
+        "imageUrl": "http://cdn2.jianshu.io/assets/web/banner-s-6-c4d6335bfd688f2ca1115b42b04c28a7.png"
+      }
+    ],
+    "authorList": [
+      {
+        "id": 1,
+        "name": "闫泽华",
+        "like": "2.1k",
+        "total": "224.1k",
+        "imageUrl": "//upload.jianshu.io/users/upload_avatars/52841/251f5481-67b6-4bf0-86f4-faac9768beb3.jpeg?imageMogr2/auto-orient/strip|imageView2/1/w/96/h/96/format/webp"
+      },
+      {
+        "id": 2,
+        "name": "乔汉童",
+        "like": "2.1k",
+        "total": "224.1k",
+        "imageUrl": "//upload.jianshu.io/users/upload_avatars/5796592/73837104-47e5-4fe9-a5be-054bd50b06f7.jpg?imageMogr2/auto-orient/strip|imageView2/1/w/96/h/96/format/webp"
+      },
+      {
+        "id": 3,
+        "name": "冰千里",
+        "like": "2.1k",
+        "total": "224.1k",
+        "imageUrl": "//upload.jianshu.io/users/upload_avatars/8972166/027bf05a-67fa-459e-b61c-c73ce267367c.jpg?imageMogr2/auto-orient/strip|imageView2/1/w/96/h/96/format/webp"
+      },
+      {
+        "id": 4,
+        "name": "徐林Grace",
+        "like": "2.1k",
+        "total": "224.1k",
+        "imageUrl": "//upload.jianshu.io/users/upload_avatars/5545154/1a3d5ed6-9ad1-44b3-9457-3e6a29dd1b71.jpg?imageMogr2/auto-orient/strip|imageView2/1/w/96/h/96/format/webp"
+      },
+      {
+        "id": 5,
+        "name": "三儿王屿",
+        "like": "2.1k",
+        "total": "224.1k",
+        "imageUrl": "//upload.jianshu.io/users/upload_avatars/3950651/acfaa0ce-42fe-424a-b7c8-9a0136fb96ec.jpg?imageMogr2/auto-orient/strip|imageView2/1/w/96/h/96/format/webp"
+      }
+    ]
+  }
+}

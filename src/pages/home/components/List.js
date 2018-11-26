@@ -1,10 +1,11 @@
 import React, {Component, Fragment} from 'react';
 import {connect} from 'react-redux';
-import {ListItem, ListInfo} from '../style';
+import {ListItem, ListInfo, LoadMore} from '../style';
+import {actionCreators} from '../store';
 
 class List extends Component {
   render() {
-    const {list} = this.props;
+    const {list, getMoreList, articlePage} = this.props;
     return (
       <Fragment>
         {
@@ -22,13 +23,21 @@ class List extends Component {
             )
           })
         }
+        <LoadMore onClick={() => getMoreList(articlePage)}>阅读更多</LoadMore>
       </Fragment>
     )
   }
 }
 
-const mapStateToProps = (state) => ({
-  list: state.getIn(['home', 'articleList'])
+const mapDispatchToProps = (dispatch) => ({
+  getMoreList(articlePage) {
+    dispatch(actionCreators.getMoreList(articlePage));
+  }
 });
 
-export default connect(mapStateToProps, null)(List);
+const mapStateToProps = (state) => ({
+  list: state.getIn(['home', 'articleList']),
+  articlePage: state.getIn(['home', 'articlePage'])
+});
+
+export default connect(mapStateToProps, mapDispatchToProps)(List);
