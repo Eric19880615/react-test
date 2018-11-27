@@ -1,9 +1,10 @@
-import React, {Component} from 'react';
+import React, {PureComponent} from 'react';
+import {withRouter} from "react-router-dom";
 import {DetailWrapper, Header, Content} from './style';
 import {connect} from 'react-redux';
 import {actionCreators} from './store';
 
-class Detail extends Component {
+class Detail extends PureComponent {
   render() {
     const {title, content} = this.props;
     return (
@@ -15,7 +16,7 @@ class Detail extends Component {
   }
 
   componentDidMount() {
-    this.props.fetchDetail();
+    this.props.fetchDetail(this.props.match.params.id);
   }
 }
 
@@ -25,9 +26,9 @@ const mapStateToProps = (state) => ({
 });
 
 const mapDispatchToProps = (dispatch) => ({
-  fetchDetail() {
-    dispatch(actionCreators.getDetail());
+  fetchDetail(id) {
+    dispatch(actionCreators.getDetail(id));
   }
 });
 
-export default connect(mapStateToProps, mapDispatchToProps)(Detail);
+export default connect(mapStateToProps, mapDispatchToProps)(withRouter(Detail));

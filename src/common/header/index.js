@@ -8,12 +8,13 @@ import {
   SearchInfoSwitch, SearchInfoList, SearchInfoItem
 } from './style';
 import {actionCreators} from './store';
+import {actionCreators as loginActionCreators} from '../../pages/login/store';
 import {Link} from 'react-router-dom';
 
 
 class Header extends Component {
   render() {
-    const {focused, handleInputFocus, handleInputBlur, list} = this.props;
+    const {focused, handleInputFocus, handleInputBlur, list, login, logout} = this.props;
     return (
       <HeaderWrapper>
         <Link to='/'>
@@ -22,7 +23,11 @@ class Header extends Component {
         <Nav>
           <NavItem className='left active'>首页</NavItem>
           <NavItem className='left'>下载App</NavItem>
-          <NavItem className='right'>登录</NavItem>
+          {
+            login ?
+              <NavItem className='right' onClick={logout}>退出</NavItem> :
+              <Link to='/login'><NavItem className='right'>登录</NavItem></Link>
+          }
           <NavItem className='right'>
             <i className="iconfont">&#xe636;</i>
           </NavItem>
@@ -38,6 +43,7 @@ class Header extends Component {
                   handleInputFocus(list)
                 }}
                 onBlur={handleInputBlur}
+                onKeyDown={(e) => this.props.handleKeyEnter(e)}
               />
             </CSSTransition>
             <i className={focused ? 'focused iconfont zoom' : 'iconfont zoom'}>&#xe623;</i>
@@ -45,10 +51,12 @@ class Header extends Component {
           </SearchWrapper>
         </Nav>
         <Addition>
-          <Button className='write'>
-            <i className="iconfont">&#xe617;</i>
-            写文章
-          </Button>
+          <Link to='/write'>
+            <Button className='write'>
+              <i className="iconfont">&#xe617;</i>
+              写文章
+            </Button>
+          </Link>
           <Button className='reg'>注册</Button>
         </Addition>
       </HeaderWrapper>
@@ -97,12 +105,12 @@ class Header extends Component {
 
 const mapStateToProps = (state) => {
   return {
-    // focused: state.get('header').get('focused')
     focused: state.getIn(['header', 'focused']),
     list: state.getIn(['header', 'list']),
     totalPage: state.getIn(['header', 'totalPage']),
     page: state.getIn(['header', 'page']),
-    mouseIn: state.getIn(['header', 'mouseIn'])
+    mouseIn: state.getIn(['header', 'mouseIn']),
+    login: state.getIn(['login', 'login'])
   }
 };
 
@@ -123,6 +131,15 @@ const mapDispatchToProps = (dispatch) => {
     },
     handleMouseLeave() {
       dispatch(actionCreators.mouseLeave());
+    },
+    handleKeyEnter(e) {
+      // console.log(e.charCode, e.keyCode, e.key);
+      if (e.keyCode === 13) {
+        console.log('回车事件');
+      }
+    },
+    logout() {
+      dispatch(loginActionCreators.logout());
     },
     handleChangePage(page, totalPage, spin) {
       //icon旋转动画
